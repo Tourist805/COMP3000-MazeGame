@@ -23,7 +23,7 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         _mazeConstructor = GetComponent<MazeConstructor>();
-        _mazeConstructor.GenerateNewMaze(25, 31);
+        StartGame();
     }
 
     private void StartGame()
@@ -33,6 +33,62 @@ public class GameController : MonoBehaviour
         _startTime = DateTime.Now;
 
         _score = 0;
-        _scoreLabel.text = _score.ToString();
+        // _scoreLabel.text = _score.ToString();
+        InitializeMaze();
+    }
+
+    private void InitializeMaze()
+    {
+        _mazeConstructor.GenerateNewMaze(25, 31, OnStartTrigger, OnGoalTrigger);
+
+        float x = _mazeConstructor.StartCol * _mazeConstructor.HallWidth;
+        float y = 1;
+        float z = _mazeConstructor.StartCol * _mazeConstructor.HallWidth;
+        _player.transform.position = new Vector3(x, y, z);
+
+        _goalReached = false;
+        _player.enabled = true;
+
+        _timeLimit -= _reduceLimitBy;
+        _startTime = DateTime.Now;
+    }
+    private void Update()
+    {
+        if(_player.enabled)
+        {
+            return;
+        }
+
+        int timeUsed = (int)(DateTime.Now - _startTime).TotalSeconds;
+        int timeLeft = _timeLimit - timeUsed;
+
+        if(timeLeft > 0)
+        {
+
+        }
+        else
+        {
+            _player.enabled = false;
+            Invoke("StartGame", 4);
+        }
+    }
+    private void OnGoalTrigger(GameObject trigger, GameObject other)
+    {
+        Debug.Log("Goal");
+        _goalReached = true;
+
+        _score += 1;
+        Destroy(trigger);
+    }
+
+    private void OnStartTrigger(GameObject trigger, GameObject other)
+    {
+        if(_goalReached)
+        {
+            Debug.Log("Finished");
+            _player.enabled = false;
+
+            Invoke("InitializeMaze", 4);
+        }
     }
 }
