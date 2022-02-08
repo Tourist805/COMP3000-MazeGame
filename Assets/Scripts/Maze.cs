@@ -52,27 +52,32 @@ public class Maze : MonoBehaviour
     {
         int currentIndex = activeCells.Count - 1;
         MazeCell currentCell = activeCells[currentIndex];
-        MazeDirection direction = MazeDirections.RandomValue;
-        IntVector2 coordinates = currentCell.coordinates + direction.ToIntVector2();
-        if(ContainsCoordinates(coordinates) && GetCell(coordinates) == null)
+        if (currentCell.IsFullyInitialized)
         {
-            MazeCell neighbour = GetCell(coordinates);
-            if(neighbour == null)
+            activeCells.RemoveAt(currentIndex);
+            return;
+        }
+        MazeDirection direction = currentCell.RandomUninitializedDirection;
+        IntVector2 coordinates = currentCell.coordinates + direction.ToIntVector2();
+        if (ContainsCoordinates(coordinates))
+        {
+            MazeCell neighbor = GetCell(coordinates);
+            if (neighbor == null)
             {
-                neighbour = CreateCell(coordinates);
-                CreatePassage(currentCell, neighbour, direction);
-                activeCells.Add(CreateCell(coordinates));
+                neighbor = CreateCell(coordinates);
+                CreatePassage(currentCell, neighbor, direction);
+                activeCells.Add(neighbor);
             }
             else
             {
-                CreateWall(currentCell, neighbour, direction);
-                activeCells.RemoveAt(currentIndex);
+                CreateWall(currentCell, neighbor, direction);
+                // No longer remove the cell here.
             }
         }
         else
         {
             CreateWall(currentCell, null, direction);
-            activeCells.RemoveAt(currentIndex);
+            // No longer remove the cell here.
         }
     }
 
