@@ -30,6 +30,21 @@ public class Maze : MonoBehaviour
         rooms.Add(newRoom);
         return newRoom;
     }
+
+    private void CreatePassageInSameRoom(MazeCell cell, MazeCell otherCell, MazeDirection direction)
+    {
+        MazePassage passage = Instantiate(PassagePrefab) as MazePassage;
+        passage.Initialize(cell, otherCell, direction);
+        passage = Instantiate(PassagePrefab) as MazePassage;
+        passage.Initialize(otherCell, cell, direction.GetOpposite());
+        if (cell.Room != otherCell.Room)
+        {
+            MazeRoom roomToAssimilate = otherCell.Room;
+            cell.Room.Assimilate(roomToAssimilate);
+            rooms.Remove(roomToAssimilate);
+            Destroy(roomToAssimilate);
+        }
+    }
     public IntVector2 RandomCoordinates
     {
         get
@@ -88,16 +103,18 @@ public class Maze : MonoBehaviour
                 CreatePassage(currentCell, neighbor, direction);
                 activeCells.Add(neighbor);
             }
+            else if (currentCell.Room.SettingsIndex == neighbor.Room.SettingsIndex)
+            {
+                CreatePassageInSameRoom(currentCell, neighbor, direction);
+            }
             else
             {
                 CreateWall(currentCell, neighbor, direction);
-                // No longer remove the cell here.
             }
         }
         else
         {
             CreateWall(currentCell, null, direction);
-            // No longer remove the cell here.
         }
     }
 
