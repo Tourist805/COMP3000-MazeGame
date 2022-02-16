@@ -64,10 +64,10 @@ MonoBehaviour:
   _doorProbability: 0.1
   RoomSettings:
   - FloorMaterial: {fileID: 2100000, guid: 20319c24c3fa59142be36002387f2e80, type: 2}
-    WallMaterial: {fileID: 2100000, guid: a2180dd59a055924aad4a825d2901860, type: 2}
+    WallMaterial: {fileID: 2100000, guid: 41c619e6dd740f548b1efbd712e18ad4, type: 2}
   - FloorMaterial: {fileID: 2100000, guid: cc73793a11b239a40886a487dc6dab88, type: 2}
-    WallMaterial: {fileID: 2100000, guid: a26fbafb6efd8c84aa9fa125842985c2, type: 2}
+    WallMaterial: {fileID: 2100000, guid: 41c619e6dd740f548b1efbd712e18ad4, type: 2}
   - FloorMaterial: {fileID: 2100000, guid: d69d0f03caa053b4e97b3ec831f81296, type: 2}
-    WallMaterial: {fileID: 2100000, guid: 7440b0931ab17364ea9a36952cba71f6, type: 2}
+    WallMaterial: {fileID: 2100000, guid: 41c619e6dd740f548b1efbd712e18ad4, type: 2}
   - FloorMaterial: {fileID: 2100000, guid: 0fcc870bbb90bb34a9e4c270d09b3271, type: 2}
-    WallMaterial: {fileID: 2100000, guid: aab5596972888b24185608302bb4ad7c, type: 2}
+    WallMaterial: {fileID: 2100000, guid: 41c619e6dd740f548b1efbd712e18ad4, type: 2}
