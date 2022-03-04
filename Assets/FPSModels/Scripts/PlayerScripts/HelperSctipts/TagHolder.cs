@@ -13,3 +13,9 @@ public class MouseAxis
     public const string MOUSEX = "Mouse X";
     public const string MOUSEY = "Mouse Y";
 }
+
+public class AnimationTags
+{
+    public const string SHOOT_TRIGGER = "Shoot";
+    public const string AIM_PARAMETRE = "Aim";
+}
