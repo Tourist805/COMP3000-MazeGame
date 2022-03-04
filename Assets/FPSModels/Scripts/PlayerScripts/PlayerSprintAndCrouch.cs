@@ -33,9 +33,7 @@ public class PlayerSprintAndCrouch : MonoBehaviour
 
     private void Start()
     {
-        _playerFootsteps.VolumeMin = _walkVolumeMin;
-        _playerFootsteps.VolumeMax = _walkVolumeMax;
-        _playerFootsteps.StepDistance = _walkStepDistance;
+        setVolumeAndDistance(_walkStepDistance, _walkVolumeMin, _walkVolumeMax);
     }
 
     private void Update()
@@ -49,18 +47,12 @@ public class PlayerSprintAndCrouch : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.LeftShift) && !_isCrouching)
         {
             _playerMovement.Speed = _spintSpeed;
-
-            _playerFootsteps.StepDistance = _sprintStepDistance;
-            _playerFootsteps.VolumeMin = _sprintVolume;
-            _playerFootsteps.VolumeMax = _sprintVolume;
+            setVolumeAndDistance(_sprintStepDistance, _sprintVolume, _sprintVolume);
         }
         if(Input.GetKeyUp(KeyCode.LeftShift) && !_isCrouching)
         {
             _playerMovement.Speed = _moveSpeed;
-
-            _playerFootsteps.StepDistance = _walkStepDistance;
-            _playerFootsteps.VolumeMin = _walkVolumeMin;
-            _playerFootsteps.VolumeMax = _walkVolumeMax;
+            setVolumeAndDistance(_walkStepDistance, _walkVolumeMin, _walkVolumeMax);
         }
         if(Input.GetKey(KeyCode.LeftShift) && !_isCrouching)
         {
@@ -77,9 +69,7 @@ public class PlayerSprintAndCrouch : MonoBehaviour
                 _lookRoot.localPosition = new Vector3(0f, _standHeight, 0f);
                 _playerMovement.Speed = _moveSpeed;
 
-                _playerFootsteps.StepDistance = _walkStepDistance;
-                _playerFootsteps.VolumeMin = _walkVolumeMin;
-                _playerFootsteps.VolumeMax = _walkVolumeMax;
+                setVolumeAndDistance(_walkStepDistance, _walkVolumeMin, _walkVolumeMax);
 
                 _isCrouching = false;
             }
@@ -88,12 +78,17 @@ public class PlayerSprintAndCrouch : MonoBehaviour
                 _lookRoot.localPosition = new Vector3(0f, _crouchHeight, 0f);
                 _playerMovement.Speed = _crouchSpeed;
 
-                _playerFootsteps.StepDistance = _crouchStepDistance;
-                _playerFootsteps.VolumeMin = _crouchVolume;
-                _playerFootsteps.VolumeMax = _crouchVolume;
+                setVolumeAndDistance(_crouchStepDistance, _crouchVolume, _crouchVolume);
 
                 _isCrouching = true;
             }
         }
+    }
+
+    private void setVolumeAndDistance(float stepDistance, float volumeMin, float volumeMax)
+    {
+        _playerFootsteps.StepDistance = stepDistance;
+        _playerFootsteps.VolumeMin = volumeMin;
+        _playerFootsteps.VolumeMax = volumeMax;
     }
 }
