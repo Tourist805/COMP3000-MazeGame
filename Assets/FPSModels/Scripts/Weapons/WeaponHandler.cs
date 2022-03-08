@@ -13,13 +13,16 @@ public class WeaponHandler : MonoBehaviour
     [SerializeField] private WeaponFireType _weaponFire;
     [SerializeField] private WeaponBulletType _weaponBullet;
     [SerializeField] private GameObject _attackPoint;
+    public WeaponFireType WeaponFire { get { return _weaponFire; } set { _weaponFire = value; } }
+    public WeaponBulletType BulletType { get { return _weaponBullet; } set { _weaponBullet = value; } }
+    public WeaponAim WeaponAim { get { return _weaponAim; } set { _weaponAim = value; } }
 
     private void Awake()
     {
         _animator = GetComponent<Animator>();
     }
 
-    public void StartShootAnimation()
+    public void StartShootingAnimation()
     {
         _animator.SetTrigger(AnimationTags.SHOOT_TRIGGER);
     }

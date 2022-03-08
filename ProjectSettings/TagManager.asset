@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Generated
+  - Axe
+  - CrossHair
+  - LookRoot
+  - FPCamera
   layers:
   - Default
   - TransparentFX

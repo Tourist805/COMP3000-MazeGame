@@ -18,4 +18,16 @@ public class AnimationTags
 {
     public const string SHOOT_TRIGGER = "Shoot";
     public const string AIM_PARAMETRE = "Aim";
+    public const string ZOOM_IN_ANIM = "Zooming";
+    public const string ZOOM_OUT_ANIM = "Zooming Out";
 }
+
+public class Tags
+{
+    public const string AXE_TAG = "Axe";
+    public const string CROSSHAIR = "CrossHair";
+    public const string LOOK_ROOT = "LookRoot";
+    public const string ZOOM_CAMERA = "FPCamera";
+}
+
+
