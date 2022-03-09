@@ -15,6 +15,10 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private Camera _camera;
     private bool _isAiming;
     private GameObject _crossHair;
+    private WeaponHandler _weapon => _weaponManager.GetCurrentWeapon();
+
+    [SerializeField] private GameObject _arrowPrefab, _spearPrefab;
+    [SerializeField] private Transform _projectileStartPosition;
 
     private void Awake()
     {
@@ -31,41 +35,42 @@ public class PlayerAttack : MonoBehaviour
 
     private void WeaponShoot()
     {
-        if(_weaponManager.GetCurrentWeapon().WeaponFire == WeaponFireType.Multiple)
+        if(_weapon.WeaponFire == WeaponFireType.Multiple)
         {
             if(Input.GetMouseButton(0) && Time.time > _nextTimeToFire)
             {
                 _nextTimeToFire = Time.time + 1f / _fireRate;
-                _weaponManager.GetCurrentWeapon().StartShootingAnimation();
+                _weapon.StartShootingAnimation();
+                FireBullet();
             }
         }
         else
         {
             if(Input.GetMouseButtonDown(0))
             {
-                if(_weaponManager.GetCurrentWeapon().tag == Tags.AXE_TAG)
+                if(_weapon.tag == Tags.AXE_TAG)
                 {
-                    _weaponManager.GetCurrentWeapon().StartShootingAnimation();
+                    _weapon.StartShootingAnimation();
                 }
 
-                if(_weaponManager.GetCurrentWeapon().BulletType == WeaponBulletType.Bullet)
+                if(_weapon.BulletType == WeaponBulletType.Bullet)
                 {
-                    _weaponManager.GetCurrentWeapon().StartShootingAnimation();
-                    // shooting bullets
+                    _weapon.StartShootingAnimation();
+                    FireBullet();
                 }
                 else
                 {
                     // spear and arrow
                     if(_isAiming)
                     {
-                        _weaponManager.GetCurrentWeapon().StartShootingAnimation();
-                        if(_weaponManager.GetCurrentWeapon().BulletType == WeaponBulletType.Arrow)
+                        _weapon.StartShootingAnimation();
+                        if(_weapon.BulletType == WeaponBulletType.Arrow)
                         {
-
+                            ThrowProjectile(true);
                         }
-                        else if(_weaponManager.GetCurrentWeapon().BulletType == WeaponBulletType.Spear)
+                        else if(_weapon.BulletType == WeaponBulletType.Spear)
                         {
-
+                            ThrowProjectile(false);
                         }
                     }
                 }
@@ -76,8 +81,7 @@ public class PlayerAttack : MonoBehaviour
     private void PerformZooming()
     {
         // Aiming camera to the weapon
-        Debug.Log("Zooming: " + _weaponManager.GetCurrentWeapon().WeaponAim);
-        if(_weaponManager.GetCurrentWeapon().WeaponAim == WeaponAim.Aim)
+        if(_weapon.WeaponAim == WeaponAim.Aim)
         {
             if(Input.GetMouseButtonDown(1))
             {
@@ -91,18 +95,44 @@ public class PlayerAttack : MonoBehaviour
             }
         }
 
-        if(_weaponManager.GetCurrentWeapon().WeaponAim == WeaponAim.SelfAim)
+        if(_weapon.WeaponAim == WeaponAim.SelfAim)
         {
             if(Input.GetMouseButtonDown(1))
             {
-                _weaponManager.GetCurrentWeapon().Aim(true);
+                _weapon.Aim(true);
                 _isAiming = true;
             }
             if(Input.GetMouseButtonUp(1))
             {
-                _weaponManager.GetCurrentWeapon().Aim(false);
+                _weapon.Aim(false);
                 _isAiming = false;
             }
+        }
+    }
+
+    private void ThrowProjectile(bool throwArrow)
+    {
+        if(throwArrow)
+        {
+            GameObject arrow = Instantiate(_arrowPrefab);
+            arrow.transform.position = _projectileStartPosition.position;
+            arrow.GetComponent<ProjectileSpawn>().Launch(_camera);
+        }
+        else
+        {
+            GameObject spear = Instantiate(_spearPrefab);
+            spear.transform.position = _projectileStartPosition.position;
+            spear.GetComponent<ProjectileSpawn>().Launch(_camera);
+        }
+    }
+
+    private void FireBullet()
+    {
+        RaycastHit hit;
+
+        if(Physics.Raycast(_camera.transform.position, _camera.transform.forward, out hit))
+        {
+            Debug.Log("We Hit: " + hit.transform.gameObject.name);
         }
     }
 }

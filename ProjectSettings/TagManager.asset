@@ -9,6 +9,7 @@ TagManager:
   - CrossHair
   - LookRoot
   - FPCamera
+  - Arrow
   layers:
   - Default
   - TransparentFX
