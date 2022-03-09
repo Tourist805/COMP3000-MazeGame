@@ -20,6 +20,10 @@ public class AnimationTags
     public const string AIM_PARAMETRE = "Aim";
     public const string ZOOM_IN_ANIM = "Zooming";
     public const string ZOOM_OUT_ANIM = "Zooming Out";
+    public const string WALK_PARAMETER = "Walk";
+    public const string RUN_PARAMETER = "Run";
+    public const string ATTACK_TRIGGER = "Attack";
+    public const string DEAD_TRIGGER = "Dead";
 }
 
 public class Tags
