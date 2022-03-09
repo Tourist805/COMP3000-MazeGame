@@ -19,7 +19,6 @@ public class PlayerAttack : MonoBehaviour
     private void Awake()
     {
         _weaponManager = GetComponent<WeaponManager>();
-        //_zoomCameraAnim = transform.Find(Tags.LOOK_ROOT).transform.Find(Tags.ZOOM_CAMERA).GetComponent<Animator>();
         _zoomCameraAnim = (FindObjectOfType<FPCamera>()).gameObject.GetComponent<Animator>();
         _crossHair = (FindObjectOfType<CrossHair>()).gameObject;
     }
@@ -101,7 +100,7 @@ public class PlayerAttack : MonoBehaviour
             }
             if(Input.GetMouseButtonUp(1))
             {
-                _weaponManager.GetCurrentWeapon().Aim(true);
+                _weaponManager.GetCurrentWeapon().Aim(false);
                 _isAiming = false;
             }
         }
