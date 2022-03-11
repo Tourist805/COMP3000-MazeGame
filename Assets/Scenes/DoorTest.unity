@@ -992,6 +992,23 @@ Transform:
   m_Father: {fileID: 728145269}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1678425578 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1165363139035319894, guid: 7f4d75008d39c66428aa2caf8cce62c4, type: 3}
+  m_PrefabInstance: {fileID: 1165363139769909205}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1678425585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678425578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc624a51993ec6c44a8f27b677c589bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1715963357
 GameObject:
   m_ObjectHideFlags: 0
@@ -1412,3 +1429,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c190a8f63d4cb0f44ba97a1ebc0b716e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5441614387520256419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5441614387520256412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56f405a3abe82b245bf0d4491f3cbce8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _walkSpeed: 0.5
+  _runSpeed: 4
+  _chaseDistance: 7
+  _attackDistance: 1.8
+  _chaseAffterAttackDistance: 2
+  _patrolRadiusMinimum: 20
+  _patrolRadiusMax: 60
+  _patrolThisTime: 15
+  _waitBeforeAttack: 2
