@@ -549,6 +549,10 @@ GameObject:
   - component: {fileID: 5087308648311845823}
   - component: {fileID: 5093807961505417663}
   - component: {fileID: 6558648803409296130}
+  - component: {fileID: 5441614387520256413}
+  - component: {fileID: 5441614387520256419}
+  - component: {fileID: 7849616093707117792}
+  - component: {fileID: 5080312395186993045}
   m_Layer: 0
   m_Name: Cannibal
   m_TagString: Untagged
@@ -584,7 +588,7 @@ Animator:
   m_GameObject: {fileID: 6958878289719952268}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 5eb4e4c4d0b3c8f4bb02a762ec01f6b4, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 89b67c559139061469c3623eb40c8b46, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -644,6 +648,67 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &5441614387520256413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6958878289719952268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c190a8f63d4cb0f44ba97a1ebc0b716e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5441614387520256419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6958878289719952268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56f405a3abe82b245bf0d4491f3cbce8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _walkSpeed: 0.5
+  _runSpeed: 4
+  _chaseDistance: 7
+  _attackDistance: 1.8
+  _chaseAffterAttackDistance: 2
+  _patrolRadiusMinimum: 20
+  _patrolRadiusMax: 60
+  _patrolThisTime: 15
+  _waitBeforeAttack: 2
+--- !u!123 &7849616093707117792
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6958878289719952268}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
+--- !u!114 &5080312395186993045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6958878289719952268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92d7361f68e6e8b4e862b2d126fb7ff0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6958878289719952270
 GameObject:
   m_ObjectHideFlags: 0
