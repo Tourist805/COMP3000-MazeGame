@@ -10,6 +10,7 @@ TagManager:
   - LookRoot
   - FPCamera
   - Arrow
+  - Enemy
   layers:
   - Default
   - TransparentFX
