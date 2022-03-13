@@ -32,6 +32,8 @@ public class Tags
     public const string CROSSHAIR = "CrossHair";
     public const string LOOK_ROOT = "LookRoot";
     public const string ZOOM_CAMERA = "FPCamera";
+    public const string PLAYER_TAG = "Player";
+    public const string ENEMY_TAG = "Enemy";
 }
 
 

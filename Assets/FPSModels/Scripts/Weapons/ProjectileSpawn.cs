@@ -30,7 +30,12 @@ public class ProjectileSpawn : MonoBehaviour
 
     private void OnTriggerEnter(Collider target)
     {
-        
+        if(target.tag == Tags.ENEMY_TAG)
+        {
+            target.GetComponent<HealthHandler>().ApplyDamage(_damage);
+
+            gameObject.SetActive(false);
+        }
     }
 
     public void Launch(Camera camera)

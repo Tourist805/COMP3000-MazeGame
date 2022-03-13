@@ -11,11 +11,32 @@ public class EnemyController : MonoBehaviour
     private NavMeshAgent _navAgent;
 
     private EnemyState _enemyState;
+    public EnemyState EnemyState { 
+        get
+        {
+            return _enemyState;
+        } 
+        set
+        {
+            _enemyState = value;
+        }
+    }
 
     [SerializeField] private float _walkSpeed = 0.5f;
     [SerializeField] private float _runSpeed = 4f;
 
     [SerializeField] private float _chaseDistance = 7f;
+    public float ChaseDistance
+    {
+        get
+        {
+            return _chaseDistance;
+        }
+        set
+        {
+            _chaseDistance = value;
+        }
+    }
     private float _currentChaseDistance;
     [SerializeField] private float _attackDistance = 1.8f;
     [SerializeField] private float _chaseAffterAttackDistance = 2f;
@@ -28,6 +49,7 @@ public class EnemyController : MonoBehaviour
 
     private Transform target;
     [SerializeField] private GameObject _attackPoint;
+    private EnemyAudioContoller _audioContoller;
 
 
     private void Awake()
@@ -36,6 +58,7 @@ public class EnemyController : MonoBehaviour
         _navAgent = GetComponent<NavMeshAgent>();
 
         target = (FindObjectOfType<PlayerMark>()).gameObject.transform;
+        _audioContoller = GetComponentInChildren<EnemyAudioContoller>();
     }
 
     private void Start()
@@ -91,6 +114,7 @@ public class EnemyController : MonoBehaviour
         {
             _enemyAnimator.PerformWalk(false);
             _enemyState = EnemyState.Chase;
+            _audioContoller.PlayScreamSound();
         }
     }
 
@@ -145,7 +169,7 @@ public class EnemyController : MonoBehaviour
         {
             _enemyAnimator.PerformAttack();
             _attackTimer = 0f;
-
+            _audioContoller.PlayAttackSound();
         }
 
         if(Vector3.Distance(transform.position, target.position) > (_attackDistance + _chaseAffterAttackDistance))

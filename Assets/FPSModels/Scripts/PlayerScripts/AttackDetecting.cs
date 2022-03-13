@@ -19,7 +19,7 @@ public class AttackDetecting : MonoBehaviour
 
         if(hits.Length > 0)
         {
-            //hits[0].gameObject.TryGetComponent()
+            hits[0].gameObject.GetComponent<HealthHandler>().ApplyDamage(_damage);
             
             Debug.Log("Touched " + hits[0].gameObject.tag);
             gameObject.SetActive(false);
