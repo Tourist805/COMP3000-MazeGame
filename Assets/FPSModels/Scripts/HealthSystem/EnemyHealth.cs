@@ -1,13 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
+[RequireComponent(typeof(EnemyAnimator), typeof(EnemyController), typeof(NavMeshAgent))]
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private float _health = 100f;
     public float Health { get { return _health; } set { _health = value; } }
     private bool _isDead;
-    private EnemyAudioContoller _audioContoller;
+    [SerializeField] private float _chasingRadius = 50f;
+    private EnemyAudioContoller _audioController;
+    private EnemyAnimator _enemyAnimator;
+    private NavMeshAgent _navMeshAgent;
+    private EnemyController _enemyController;
+
+    private void Awake()
+    {
+        _enemyAnimator = GetComponent<EnemyAnimator>();
+        _enemyController = GetComponent<EnemyController>();
+        _navMeshAgent = GetComponent<NavMeshAgent>();
+
+        _audioController = GetComponentInChildren<EnemyAudioContoller>();
+    }
 
     public void ApplyDamage(float damage)
     {
@@ -16,7 +31,12 @@ public class EnemyHealth : MonoBehaviour
 
         _health -= damage;
 
-        if(_health <= 0f)
+        if (_enemyController.EnemyState == EnemyState.Patrol)
+        {
+            _enemyController.ChaseDistance = _chasingRadius;
+        }
+
+        if (_health <= 0f)
         {
             _isDead = true;
             OnDead();
@@ -25,12 +45,23 @@ public class EnemyHealth : MonoBehaviour
 
     private void OnDead()
     {
+        _navMeshAgent.velocity = Vector3.zero;
+        _navMeshAgent.isStopped = true;
+        _enemyController.enabled = false;
+
+        _enemyAnimator.PerformDying();
         StartCoroutine(PlayDeathSound());
+        Invoke("TurnOffGameObject", 3f);
+    }
+
+    private void TurnOffGameObject()
+    {
+        gameObject.SetActive(false);
     }
 
     private IEnumerator PlayDeathSound()
     {
         yield return new WaitForSeconds(0.3f);
-        _audioContoller.PlayDyingSound();
+        _audioController.PlayDyingSound();
     }
 }
