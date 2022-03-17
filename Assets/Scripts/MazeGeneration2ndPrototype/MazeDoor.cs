@@ -31,14 +31,14 @@ public class MazeDoor : MazePassage
             p.x = -p.x;
             Hinge.localPosition = p;
         }
-        //for (int i = 0; i < transform.childCount; i++)
-        //{
-        //    Transform child = transform.GetChild(i);
-        //    if(child != Hinge)
-        //    {
-        //        child.GetComponent<Renderer>().material = cell.Room.settings.WallMaterial;
-        //    }
-        //}
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            Transform child = transform.GetChild(i);
+            if (child != Hinge)
+            {
+                child.GetComponent<Renderer>().material = cell.Room.settings.WallMaterial;
+            }
+        }
     }
 
     public override void OnPlayerEntered()

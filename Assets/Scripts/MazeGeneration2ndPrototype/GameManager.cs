@@ -16,10 +16,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        //if(Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    RestartGame();
-        //}
+    
     }
 
     private IEnumerator BeginGame()
