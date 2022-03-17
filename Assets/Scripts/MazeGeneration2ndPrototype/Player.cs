@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
 	private MazeCell currentCell;
 	private MazeDirection _currentDirection;
-	[SerializeField]private bool _isInitialPlayer = false;
+	[SerializeField] private bool _isInitialPlayer = false;
 	private void Look(MazeDirection direction)
     {
 		transform.localRotation = direction.ToRotation();
