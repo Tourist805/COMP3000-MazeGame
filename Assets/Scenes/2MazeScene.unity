@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MazePrefab: {fileID: 8447926603021809992, guid: ea41ce7bcb6b19244aa3ccc493cc4b97, type: 3}
-  PlayerPrefab: {fileID: 5678475661748106166, guid: 7f4d75008d39c66428aa2caf8cce62c4, type: 3}
+  PlayerPrefab: {fileID: 9061686685833701533, guid: bad8bc18d8a437c48a53acf88c3e1217, type: 3}
 --- !u!4 &675294095
 Transform:
   m_ObjectHideFlags: 0

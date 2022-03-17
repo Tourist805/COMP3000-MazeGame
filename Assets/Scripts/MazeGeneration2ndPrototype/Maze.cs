@@ -136,7 +136,7 @@ public class Maze : MonoBehaviour
     private void CreatePassage(MazeCell cell, MazeCell otherCell, MazeDirection direction)
     {
         MazePassage prefab = UnityEngine.Random.value < _doorProbability ? DoorPrefab : PassagePrefab;
-        MazePassage passage = Instantiate(PassagePrefab) as MazePassage;
+        MazePassage passage = Instantiate(prefab) as MazePassage;
         passage.Initialize(cell, otherCell, direction);
         passage = Instantiate(prefab) as MazePassage;
         if (passage is MazeDoor)
