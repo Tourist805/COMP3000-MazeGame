@@ -135,7 +135,7 @@ public class PlayerAttack : MonoBehaviour
             if(hit.transform.tag == Tags.ENEMY_TAG)
             {
                 Debug.Log(hit.transform.tag);
-                hit.transform.GetComponent<HealthHandler>().ApplyDamage(_damage);
+                hit.transform.GetComponent<EnemyHealth>().ApplyDamage(_damage);
             }
         }
     }
