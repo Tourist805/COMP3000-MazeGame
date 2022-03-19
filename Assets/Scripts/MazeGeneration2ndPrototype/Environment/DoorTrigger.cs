@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class DoorTrigger : MonoBehaviour
 {
-    [SerializeField] private Door _door;
+    private MazeDoor _door;
+
+    private void Awake()
+    {
+        _door = GetComponentInParent<MazeDoor>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.TryGetComponent(out CharacterController characterController))
         {
-            if(!_door.IsOpen)
-            {
-                _door.Open(other.transform.position);
-            }
+            _door.OnPlayerEntered();
         }
     }
 
@@ -21,10 +23,7 @@ public class DoorTrigger : MonoBehaviour
     {
         if(other.TryGetComponent(out CharacterController characterController))
         {
-            if(_door.IsOpen)
-            {
-                _door.Close();
-            }
+            _door.OnPlayerExited();
         }
     }
 }

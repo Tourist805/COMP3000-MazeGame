@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
         _playerInstance = Instantiate(PlayerPrefab) as Player;
         _playerInstance.SetLocation(_mazeInstance.GetCell(_mazeInstance.RandomCoordinates));
         Camera.main.clearFlags = CameraClearFlags.Depth;
-        Camera.main.rect = new Rect(0f, 0f, 0.25f, 0.25f);
+        Camera.main.rect = new Rect(0f, 0f, 0.5f, 0.5f);
     }
 
     private void RestartGame()

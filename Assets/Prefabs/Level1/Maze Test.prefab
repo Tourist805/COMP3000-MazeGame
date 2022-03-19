@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4519550655745116081
+--- !u!1 &6459909098079216289
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,24 +8,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2079504084470155744}
-  - component: {fileID: 6206240948409834367}
-  - component: {fileID: 8837591502225552648}
-  - component: {fileID: 2315274171422804688}
+  - component: {fileID: 8918674872114113776}
+  - component: {fileID: 3548380465737154159}
+  - component: {fileID: 2142570878186754072}
   m_Layer: 0
-  m_Name: Maze
+  m_Name: Maze Test
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2079504084470155744
+--- !u!4 &8918674872114113776
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4519550655745116081}
+  m_GameObject: {fileID: 6459909098079216289}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -33,20 +32,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6206240948409834367
+--- !u!114 &3548380465737154159
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4519550655745116081}
+  m_GameObject: {fileID: 6459909098079216289}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3533dd907694d1441ae25af639434e9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _cellPrefab: {fileID: 7396198440975640783, guid: 4012e43aa0dd677468a67a08cf90e69e, type: 3}
-  GenerationStepDelay: 0.00005
+  GenerationStepDelay: 5e-32
   size:
     x: 20
     z: 20
@@ -62,7 +61,7 @@ MonoBehaviour:
   - {fileID: 7955250929057764216, guid: bc1ff252235828e4db56cdec1baaee3a, type: 3}
   - {fileID: 2875160865606993903, guid: cc9ed7a611c7eb64ea0eb6fe44e3be1f, type: 3}
   - {fileID: 7642164092671478699, guid: 980289900715b7145926b80d3d9a7b19, type: 3}
-  DoorPrefab: {fileID: 2538159271388479718, guid: 8483d8962c3971240a462ffcfd1cc0f5, type: 3}
+  DoorPrefab: {fileID: 4788524540743105275, guid: 59b69ac9aa6ec564299a646dcc36601c, type: 3}
   _doorProbability: 0.1
   RoomSettings:
   - FloorMaterial: {fileID: 2100000, guid: 20319c24c3fa59142be36002387f2e80, type: 2}
@@ -73,32 +72,19 @@ MonoBehaviour:
     WallMaterial: {fileID: 2100000, guid: 41c619e6dd740f548b1efbd712e18ad4, type: 2}
   - FloorMaterial: {fileID: 2100000, guid: 0fcc870bbb90bb34a9e4c270d09b3271, type: 2}
     WallMaterial: {fileID: 2100000, guid: 41c619e6dd740f548b1efbd712e18ad4, type: 2}
---- !u!54 &8837591502225552648
+--- !u!54 &2142570878186754072
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4519550655745116081}
+  m_GameObject: {fileID: 6459909098079216289}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &2315274171422804688
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4519550655745116081}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}

@@ -61,7 +61,7 @@ MonoBehaviour:
   - {fileID: 7955250929057764216, guid: bc1ff252235828e4db56cdec1baaee3a, type: 3}
   - {fileID: 2875160865606993903, guid: cc9ed7a611c7eb64ea0eb6fe44e3be1f, type: 3}
   - {fileID: 7642164092671478699, guid: 980289900715b7145926b80d3d9a7b19, type: 3}
-  DoorPrefab: {fileID: 8661178118324636061, guid: 1bee3767ec0dccf40895dff8415274f3, type: 3}
+  DoorPrefab: {fileID: 4788524540743105275, guid: 59b69ac9aa6ec564299a646dcc36601c, type: 3}
   _doorProbability: 0.1
   RoomSettings:
   - FloorMaterial: {fileID: 2100000, guid: 20319c24c3fa59142be36002387f2e80, type: 2}

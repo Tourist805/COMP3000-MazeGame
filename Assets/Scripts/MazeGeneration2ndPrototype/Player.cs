@@ -37,30 +37,30 @@ public class Player : MonoBehaviour
 	{
 		if (_isInitialPlayer)
         {
-            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
-            {
-                Move(_currentDirection);
-            }
-            else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
-            {
-                Move(_currentDirection.GetNextClockwise());
-            }
-            else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
-            {
-                Move(_currentDirection.GetOpposite());
-            }
-            else if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
-            {
-                Move(_currentDirection.GetNextCounterclockwise());
-            }
-            else if (Input.GetKeyDown(KeyCode.Q))
-            {
-                Look(_currentDirection.GetNextCounterclockwise());
-            }
-            else if (Input.GetKeyDown(KeyCode.E))
-            {
-                Look(_currentDirection.GetNextClockwise());
-            }
+            //if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+            //{
+            //    Move(_currentDirection);
+            //}
+            //else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
+            //{
+            //    Move(_currentDirection.GetNextClockwise());
+            //}
+            //else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+            //{
+            //    Move(_currentDirection.GetOpposite());
+            //}
+            //else if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
+            //{
+            //    Move(_currentDirection.GetNextCounterclockwise());
+            //}
+            //else if (Input.GetKeyDown(KeyCode.Q))
+            //{
+            //    Look(_currentDirection.GetNextCounterclockwise());
+            //}
+            //else if (Input.GetKeyDown(KeyCode.E))
+            //{
+            //    Look(_currentDirection.GetNextClockwise());
+            //}
         }
 
 
