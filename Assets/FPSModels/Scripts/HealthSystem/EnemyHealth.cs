@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(EnemyAnimator), typeof(EnemyController), typeof(NavMeshAgent))]
-public class EnemyHealth : MonoBehaviour
+public class EnemyHealth : Health
 {
     [SerializeField] private float _health = 100f;
     public float Health { get { return _health; } set { _health = value; } }
@@ -24,7 +24,7 @@ public class EnemyHealth : MonoBehaviour
         _audioController = GetComponentInChildren<EnemyAudioContoller>();
     }
 
-    public void ApplyDamage(float damage)
+    public override void ApplyDamage(float damage)
     {
         if (_isDead) 
             return; 
@@ -43,7 +43,7 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    private void OnDead()
+    public override void OnDead()
     {
         _navMeshAgent.velocity = Vector3.zero;
         _navMeshAgent.isStopped = true;
