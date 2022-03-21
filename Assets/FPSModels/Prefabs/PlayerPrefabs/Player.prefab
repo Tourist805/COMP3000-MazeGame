@@ -569,8 +569,8 @@ GameObject:
   - component: {fileID: 834768175}
   - component: {fileID: 1678425585}
   - component: {fileID: 5678475661748106166}
-  - component: {fileID: 381394591}
   - component: {fileID: 381394592}
+  - component: {fileID: 1427416202}
   m_Layer: 11
   m_Name: Player
   m_TagString: Player
@@ -708,23 +708,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isInitialPlayer: 1
---- !u!114 &381394591
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1165363139035319894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2319825a36e3d094f87f8efd0b2bec00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _health: 100
-  _isPlayer: 1
-  _isBoar: 0
-  _isCannibal: 0
-  _chasingRadius: 50
 --- !u!114 &381394592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -738,6 +721,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _healthBarStats: {fileID: 0}
+--- !u!114 &1427416202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165363139035319894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da7c8556271deae41829c04ac22e83e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 100
 --- !u!1 &1165363139155836192
 GameObject:
   m_ObjectHideFlags: 0
