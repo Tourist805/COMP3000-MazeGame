@@ -24,6 +24,16 @@ public class Player : MonoBehaviour
 		currentCell.OnPlayerEntered();
 	}
 
+    public void SetNextLocation(MazeCell cell)
+    {
+        if(currentCell != null)
+        {
+            currentCell.OnPlayerEntered();
+        }
+        currentCell = cell;
+        currentCell.OnPlayerEntered();
+    }
+
 	private void Move(MazeDirection direction)
 	{
 		MazeCellEdge edge = currentCell.GetEdge(direction);

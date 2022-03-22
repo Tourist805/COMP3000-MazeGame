@@ -934,6 +934,36 @@ Transform:
   m_Father: {fileID: 728145269}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1685029219
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1685029220}
+  m_Layer: 11
+  m_Name: ClosestPointToEarth
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1685029220
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685029219}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.55, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1786996868}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1701060666
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1124,6 +1154,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!4 &1786996868 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1165363139035319888, guid: 7f4d75008d39c66428aa2caf8cce62c4, type: 3}
+  m_PrefabInstance: {fileID: 1165363139769909205}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1815567745
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1439,7 +1474,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1165363139035319888, guid: 7f4d75008d39c66428aa2caf8cce62c4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.45
+      value: 0.524
       objectReference: {fileID: 0}
     - target: {fileID: 1165363139035319888, guid: 7f4d75008d39c66428aa2caf8cce62c4, type: 3}
       propertyPath: m_LocalPosition.z
