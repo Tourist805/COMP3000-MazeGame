@@ -5,7 +5,13 @@ using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
-    [SerializeField] private Image _healthBarStats;
+    private Image _healthBarStats;
+
+    private void Awake()
+    {
+        HealthBarImage healthBar = FindObjectOfType<HealthBarImage>();
+        _healthBarStats = healthBar.GetComponent<Image>();
+    }
 
     public void DisplayHealthStats(float healthValue)
     {
