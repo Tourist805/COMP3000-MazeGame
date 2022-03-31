@@ -218,6 +218,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StatsCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6985200577325805665, guid: 09f00610da9b2224684b7516e1d78106, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09f00610da9b2224684b7516e1d78106, type: 3}
 --- !u!1001 &463526714
@@ -233,7 +237,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6148458901719412662, guid: 42e0b646ce5b3134594cf4e55c6860d9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6151753527966106822, guid: 42e0b646ce5b3134594cf4e55c6860d9, type: 3}
       propertyPath: m_RootOrder
