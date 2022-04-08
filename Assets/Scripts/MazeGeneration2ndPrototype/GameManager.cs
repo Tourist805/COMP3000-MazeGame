@@ -7,6 +7,10 @@ public class GameManager : MonoBehaviour
     public Maze MazePrefab;
     private Maze _mazeInstance;
     public Player PlayerPrefab;
+    [SerializeField] private Enemy _enemyPrefab;
+    [SerializeField] private int _enemiesNumber;
+    private Enemy _currentEnemyIntance;
+    private List<Enemy> _enemiesInstances;
 
     private Player _playerInstance;
     private void Start()
@@ -29,6 +33,12 @@ public class GameManager : MonoBehaviour
         _playerInstance.SetLocation(_mazeInstance.GetCell(_mazeInstance.RandomCoordinates));
         Camera.main.clearFlags = CameraClearFlags.Depth;
         Camera.main.rect = new Rect(0f, 0f, 0.5f, 0.5f);
+        for (int i = 0; i < _enemiesNumber; i++)
+        {
+            _currentEnemyIntance = Instantiate(_enemyPrefab) as Enemy;
+            _currentEnemyIntance.SetLocation(_mazeInstance.GetCell(_mazeInstance.RandomCoordinates));
+            _enemiesInstances.Add(_currentEnemyIntance);
+        }
     }
 
     private void RestartGame()

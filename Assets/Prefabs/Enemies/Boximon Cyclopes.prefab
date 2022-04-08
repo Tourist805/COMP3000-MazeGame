@@ -300,6 +300,7 @@ GameObject:
   - component: {fileID: 6147488590740506995}
   - component: {fileID: 6147488590740506994}
   - component: {fileID: 6147488590740506997}
+  - component: {fileID: 1743153446133171887}
   m_Layer: 10
   m_Name: Boximon Cyclopes
   m_TagString: Enemy
@@ -435,6 +436,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c190a8f63d4cb0f44ba97a1ebc0b716e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1743153446133171887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6148458901719412662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92d7361f68e6e8b4e862b2d126fb7ff0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6148534676417244512
