@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     private List<Enemy> _enemiesInstances;
 
     private Player _playerInstance;
+
+    [SerializeField] private StatsCanvas _statsCanvas;
     private void Start()
     {
         StartCoroutine(BeginGame());
@@ -33,12 +35,14 @@ public class GameManager : MonoBehaviour
         _playerInstance.SetLocation(_mazeInstance.GetCell(_mazeInstance.RandomCoordinates));
         Camera.main.clearFlags = CameraClearFlags.Depth;
         Camera.main.rect = new Rect(0f, 0f, 0.5f, 0.5f);
+        _statsCanvas.ActivateStats();
         for (int i = 0; i < _enemiesNumber; i++)
         {
             _currentEnemyIntance = Instantiate(_enemyPrefab) as Enemy;
             _currentEnemyIntance.SetLocation(_mazeInstance.GetCell(_mazeInstance.RandomCoordinates));
             _enemiesInstances.Add(_currentEnemyIntance);
         }
+        
     }
 
     private void RestartGame()
