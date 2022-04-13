@@ -7,16 +7,18 @@ public class GameManager : MonoBehaviour
     public Maze MazePrefab;
     private Maze _mazeInstance;
     public Player PlayerPrefab;
-    [SerializeField] private Enemy _enemyPrefab;
-    [SerializeField] private int _enemiesNumber;
-    private Enemy _currentEnemyIntance;
-    private List<Enemy> _enemiesInstances;
+    [SerializeField] private Enemy[] _enemyPrefabs;
+    private Enemy[] _enemies;
+
+    //private Enemy _currentEnemyIntance;
+    //private List<Enemy> _enemiesInstances;
 
     private Player _playerInstance;
 
     [SerializeField] private StatsCanvas _statsCanvas;
     private void Start()
     {
+        _enemies = new Enemy[_enemyPrefabs.Length];
         StartCoroutine(BeginGame());
     }
 
@@ -36,13 +38,20 @@ public class GameManager : MonoBehaviour
         Camera.main.clearFlags = CameraClearFlags.Depth;
         Camera.main.rect = new Rect(0f, 0f, 0.5f, 0.5f);
         _statsCanvas.ActivateStats();
-        for (int i = 0; i < _enemiesNumber; i++)
+
+        SpawnEnemies();
+    }
+
+    private void SpawnEnemies()
+    {
+        for (int i = 0; i < _enemies.Length; i++)
         {
-            _currentEnemyIntance = Instantiate(_enemyPrefab) as Enemy;
-            _currentEnemyIntance.SetLocation(_mazeInstance.GetCell(_mazeInstance.RandomCoordinates));
-            _enemiesInstances.Add(_currentEnemyIntance);
+            //_currentEnemyIntance = Instantiate(_enemyPrefab) as Enemy;
+            _enemies[i] = Instantiate(_enemyPrefabs[i]) as Enemy;
+            var gameobject = _enemies[i].gameObject;
+            _enemies[i].SetLocation(_mazeInstance.GetCell(_mazeInstance.RandomCoordinates));
+            _enemies[i].gameObject.SetActive(true);
         }
-        
     }
 
     private void RestartGame()
