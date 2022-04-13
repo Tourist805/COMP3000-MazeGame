@@ -734,7 +734,7 @@ GameObject:
   - component: {fileID: 8060576160577098763}
   - component: {fileID: 5375676511604876480}
   - component: {fileID: 5553142504190014026}
-  - component: {fileID: 252533506}
+  - component: {fileID: 1581494162}
   m_Layer: 10
   m_Name: Boar
   m_TagString: Enemy
@@ -859,7 +859,7 @@ MonoBehaviour:
   _patrolThisTime: 15
   _waitBeforeAttack: 2
   _attackPoint: {fileID: 1656877298}
---- !u!114 &252533506
+--- !u!114 &1581494162
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -868,13 +868,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2444880052795580896}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2319825a36e3d094f87f8efd0b2bec00, type: 3}
+  m_Script: {fileID: 11500000, guid: 1ba1fd7d9d2763c42b61ae4e3b69f9f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 100
-  _isPlayer: 0
-  _isBoar: 1
-  _isCannibal: 0
   _chasingRadius: 50
 --- !u!1 &2444880052795580898
 GameObject:
@@ -1114,7 +1111,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 14c2f35dd5e58e44ea6f56f558ad9c84, type: 2}
+  - {fileID: 2100000, guid: b45da3d97456dfa4baef238e28f9e1d2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

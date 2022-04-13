@@ -825,25 +825,6 @@ Transform:
   m_Father: {fileID: 728145269}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1581494161 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2444880052795580896, guid: 5d6c17d1e0edb8343be2da551a6d08d0, type: 3}
-  m_PrefabInstance: {fileID: 6727045081708383814}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1581494162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1581494161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ba1fd7d9d2763c42b61ae4e3b69f9f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _health: 100
-  _chasingRadius: 50
 --- !u!1 &1627930444
 GameObject:
   m_ObjectHideFlags: 0
@@ -1646,6 +1627,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6147488591009087153, guid: 42e0b646ce5b3134594cf4e55c6860d9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6148458901719412662, guid: 42e0b646ce5b3134594cf4e55c6860d9, type: 3}
       propertyPath: m_Name
       value: Boximon Cyclopes
@@ -1707,10 +1692,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boar
       objectReference: {fileID: 0}
-    - target: {fileID: 2444880052795580896, guid: 5d6c17d1e0edb8343be2da551a6d08d0, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2444880052795882944, guid: 5d6c17d1e0edb8343be2da551a6d08d0, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1755,6 +1736,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 252533506, guid: 5d6c17d1e0edb8343be2da551a6d08d0, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d6c17d1e0edb8343be2da551a6d08d0, type: 3}
