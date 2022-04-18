@@ -7,10 +7,15 @@ public class PlayerStats : MonoBehaviour
 {
     private Image _healthBarStats;
 
-    private void Awake()
+    private void Start()
     {
-        HealthBarImage healthBar = FindObjectOfType<HealthBarImage>();
+        GameObject healthBar = GameObject.FindWithTag("HealthBarImage");
         _healthBarStats = healthBar.GetComponent<Image>();
+        if (_healthBarStats == null)
+        {
+            Debug.Log("Health bar stats");
+        }
+        
     }
 
     public void DisplayHealthStats(float healthValue)
