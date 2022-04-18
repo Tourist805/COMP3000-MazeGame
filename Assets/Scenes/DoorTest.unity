@@ -928,6 +928,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 34098538931690716, guid: 09f00610da9b2224684b7516e1d78106, type: 3}
+      propertyPath: m_TagString
+      value: HealthBarImage
+      objectReference: {fileID: 0}
     - target: {fileID: 6985200577325805661, guid: 09f00610da9b2224684b7516e1d78106, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1627,10 +1631,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6147488591009087153, guid: 42e0b646ce5b3134594cf4e55c6860d9, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6148458901719412662, guid: 42e0b646ce5b3134594cf4e55c6860d9, type: 3}
       propertyPath: m_Name
       value: Boximon Cyclopes
