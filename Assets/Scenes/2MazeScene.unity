@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 34098538931690716, guid: 09f00610da9b2224684b7516e1d78106, type: 3}
+      propertyPath: m_TagString
+      value: HealthBarImage
+      objectReference: {fileID: 0}
     - target: {fileID: 6985200577325805661, guid: 09f00610da9b2224684b7516e1d78106, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -335,6 +339,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1184344823 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 34098538931690716, guid: 09f00610da9b2224684b7516e1d78106, type: 3}
+  m_PrefabInstance: {fileID: 3563448}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1184344825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184344823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5feb84303d2e84cbb43ce5980a3927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1236598664
 PrefabInstance:
   m_ObjectHideFlags: 0

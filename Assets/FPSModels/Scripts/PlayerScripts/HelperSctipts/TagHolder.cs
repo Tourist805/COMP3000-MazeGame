@@ -34,6 +34,7 @@ public class Tags
     public const string ZOOM_CAMERA = "FPCamera";
     public const string PLAYER_TAG = "Player";
     public const string ENEMY_TAG = "Enemy";
+    public const string HEALTH_BAR_STATS = "HealthBarImage";
 }
 
 

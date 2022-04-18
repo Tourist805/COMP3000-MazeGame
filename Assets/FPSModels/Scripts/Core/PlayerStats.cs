@@ -9,7 +9,7 @@ public class PlayerStats : MonoBehaviour
 
     private void Start()
     {
-        GameObject healthBar = GameObject.FindWithTag("HealthBarImage");
+        GameObject healthBar = GameObject.FindWithTag(Tags.HEALTH_BAR_STATS);
         _healthBarStats = healthBar.GetComponent<Image>();
         if (_healthBarStats == null)
         {
