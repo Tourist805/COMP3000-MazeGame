@@ -130,6 +130,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 34098538163422737, guid: 09f00610da9b2224684b7516e1d78106, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 34098538163422737, guid: 09f00610da9b2224684b7516e1d78106, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 34098538163422737, guid: 09f00610da9b2224684b7516e1d78106, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 34098538163422737, guid: 09f00610da9b2224684b7516e1d78106, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 34098538163422737, guid: 09f00610da9b2224684b7516e1d78106, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -379
+      objectReference: {fileID: 0}
+    - target: {fileID: 34098538163422737, guid: 09f00610da9b2224684b7516e1d78106, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 265
+      objectReference: {fileID: 0}
     - target: {fileID: 34098538931690716, guid: 09f00610da9b2224684b7516e1d78106, type: 3}
       propertyPath: m_TagString
       value: HealthBarImage
