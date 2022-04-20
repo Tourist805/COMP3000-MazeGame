@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class StatsCanvas : MonoBehaviour
 {
+    [SerializeField] private TMPro.TMP_Text _scoreText;
     public void ActivateStats()
     {
         Debug.Log("Activate Stats");
@@ -13,5 +14,10 @@ public class StatsCanvas : MonoBehaviour
     public void HideStats()
     {
         gameObject.SetActive(false);
+    }
+
+    private void Update()
+    {
+        _scoreText.text = "Score: " + Coin.Count.ToString();
     }
 }

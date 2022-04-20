@@ -51,7 +51,14 @@ public class EnemyHealth : Health
 
         _enemyAnimator.PerformDying();
         StartCoroutine(PlayDeathSound());
-        Invoke("TurnOffGameObject", 3f);
+        if (gameObject.tag == "Enemy")
+        {
+            Coin.AddPoints(DamageType.Cyclope);
+        }
+
+        Invoke("TurnOffGameObject", 1f);
+        
+        
     }
 
     private void TurnOffGameObject()
