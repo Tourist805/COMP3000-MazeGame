@@ -8,6 +8,8 @@ public class PlayerHealth : Health
     private PlayerStats _playerStats;
     private bool _isDead;
     [SerializeField] private float _health = 100f;
+    public delegate void OnPlayerDead();
+    public static OnPlayerDead PlayerDead;
 
     private void Awake()
     {
@@ -37,5 +39,6 @@ public class PlayerHealth : Health
 
         GetComponent<PlayerMovement>().enabled = false;
         GetComponent<PlayerAttack>().enabled = false;
+        PlayerDead?.Invoke();
     }
 }
