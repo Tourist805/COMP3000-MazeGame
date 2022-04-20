@@ -134,6 +134,54 @@ PrefabInstance:
       propertyPath: m_TagString
       value: HealthBarImage
       objectReference: {fileID: 0}
+    - target: {fileID: 34098538931690719, guid: 09f00610da9b2224684b7516e1d78106, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 34098538931690719, guid: 09f00610da9b2224684b7516e1d78106, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 34098538931690719, guid: 09f00610da9b2224684b7516e1d78106, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 34098538931690719, guid: 09f00610da9b2224684b7516e1d78106, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 34098538931690719, guid: 09f00610da9b2224684b7516e1d78106, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -258.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 34098538931690719, guid: 09f00610da9b2224684b7516e1d78106, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 21.000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 6985200576051575422, guid: 09f00610da9b2224684b7516e1d78106, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6985200576051575422, guid: 09f00610da9b2224684b7516e1d78106, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6985200576051575422, guid: 09f00610da9b2224684b7516e1d78106, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6985200576051575422, guid: 09f00610da9b2224684b7516e1d78106, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6985200576051575422, guid: 09f00610da9b2224684b7516e1d78106, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -589.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6985200576051575422, guid: 09f00610da9b2224684b7516e1d78106, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 20.999802
+      objectReference: {fileID: 0}
     - target: {fileID: 6985200577325805661, guid: 09f00610da9b2224684b7516e1d78106, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -224,7 +272,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6985200577325805665, guid: 09f00610da9b2224684b7516e1d78106, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09f00610da9b2224684b7516e1d78106, type: 3}
@@ -357,6 +405,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1523235076}
     m_Modifications:
+    - target: {fileID: 6760938396633646608, guid: 364b429caaf46484c96bc20219b35292, type: 3}
+      propertyPath: m_text
+      value: 'Max Framerate: '
+      objectReference: {fileID: 0}
     - target: {fileID: 6760938396633646610, guid: 364b429caaf46484c96bc20219b35292, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -458,6 +510,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MinFramerate Text
       objectReference: {fileID: 0}
+    - target: {fileID: 1425059601691025865, guid: 24663e3b0fb075e4dab2f91f6b0c2843, type: 3}
+      propertyPath: m_text
+      value: 'Min Framerate:'
+      objectReference: {fileID: 0}
     - target: {fileID: 1425059601691025867, guid: 24663e3b0fb075e4dab2f91f6b0c2843, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -468,7 +524,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1425059601691025867, guid: 24663e3b0fb075e4dab2f91f6b0c2843, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1425059601691025867, guid: 24663e3b0fb075e4dab2f91f6b0c2843, type: 3}
       propertyPath: m_AnchorMax.x
@@ -837,6 +893,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1523235076}
     m_Modifications:
+    - target: {fileID: 1164917293769226528, guid: 2a95006612347ac42b6c260f9b98e0e7, type: 3}
+      propertyPath: m_text
+      value: 'Framerate: '
+      objectReference: {fileID: 0}
     - target: {fileID: 1164917293769226531, guid: 2a95006612347ac42b6c260f9b98e0e7, type: 3}
       propertyPath: m_Name
       value: Framerate Text
