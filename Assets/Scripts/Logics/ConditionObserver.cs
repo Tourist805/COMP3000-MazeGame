@@ -24,6 +24,7 @@ public class ConditionObserver : MonoBehaviour
         {
             _gameoverUI.SetCondition(true);
             _gameoverUI.Open();
+            FreezePlayer();
         }
     }
     private void OnEnable()
@@ -34,5 +35,19 @@ public class ConditionObserver : MonoBehaviour
     private void OnDisable()
     {
         PlayerHealth.PlayerDead -= _gameoverUI.Open;
+    }
+
+    private void FreezePlayer()
+    {
+        Enemy[] enemies = FindObjectsOfType<Enemy>();
+
+        for (int i = 0; i < enemies.Length; i++)
+        {
+            enemies[i].GetComponent<EnemyController>().enabled = false;
+        }
+
+        GameObject player = FindObjectOfType<Player>().gameObject;
+        player.GetComponent<PlayerMovement>().enabled = false;
+        player.GetComponent<PlayerAttack>().enabled = false;
     }
 }
