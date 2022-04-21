@@ -407,6 +407,7 @@ MonoBehaviour:
   - {fileID: 1743153446133171887, guid: 42e0b646ce5b3134594cf4e55c6860d9, type: 3}
   - {fileID: 1743153446133171887, guid: 42e0b646ce5b3134594cf4e55c6860d9, type: 3}
   - {fileID: 7713155187646464797, guid: 5d6c17d1e0edb8343be2da551a6d08d0, type: 3}
+  - {fileID: 1585005117, guid: 7b7e60ee15b8ba94c9f694bb14989ea8, type: 3}
   _statsCanvas: {fileID: 1523235075}
 --- !u!4 &675294095
 Transform:
@@ -1825,6 +1826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameoverUI: {fileID: 1830169524}
+  _winingCondition: 40
 --- !u!1001 &1777251180
 PrefabInstance:
   m_ObjectHideFlags: 0
