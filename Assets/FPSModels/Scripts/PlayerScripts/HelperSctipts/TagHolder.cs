@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public class PrefsStorage
+{
+    public const string MAZE_LENGTH = "MazeLength";
+    public const string MAZE_WIDTH = "MazeWidth";
+}
 public class Axis
 {
     public const string HORIZONTAL = "Horizontal";

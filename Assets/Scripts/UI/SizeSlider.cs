@@ -10,6 +10,8 @@ public class SizeSlider : MonoBehaviour
     [SerializeField] private TMPro.TMP_Text _lengthText;
     [SerializeField] private TMPro.TMP_Text _widthText;
     private int _length, _width;
+    public int Length => _length;
+    public int Width => _width;
 
 
     private void Update()

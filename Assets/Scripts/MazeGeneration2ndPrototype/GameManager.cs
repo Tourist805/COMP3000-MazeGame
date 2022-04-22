@@ -10,9 +10,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Enemy[] _enemyPrefabs;
     private Enemy[] _enemies;
 
-    //private Enemy _currentEnemyIntance;
-    //private List<Enemy> _enemiesInstances;
-
     private Player _playerInstance;
 
     [SerializeField] private StatsCanvas _statsCanvas;
@@ -31,6 +28,7 @@ public class GameManager : MonoBehaviour
     {
         Camera.main.clearFlags = CameraClearFlags.Skybox;
         Camera.main.rect = new Rect(0f, 0f, 1f, 1f);
+        Debug.Log("Maze Length: " + PlayerPrefs.GetInt(PrefsStorage.MAZE_LENGTH + " Maze Width: " + PrefsStorage.MAZE_WIDTH));
         _mazeInstance = Instantiate(MazePrefab) as Maze;
         yield return StartCoroutine(_mazeInstance.Generate());
         _playerInstance = Instantiate(PlayerPrefab) as Player;
