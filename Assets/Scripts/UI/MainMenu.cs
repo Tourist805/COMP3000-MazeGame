@@ -11,6 +11,11 @@ public class MainMenu : MonoBehaviour
         _sizeSlider = GetComponent<SizeSlider>();
     }
 
+    private void Update()
+    {
+        Debug.Log("Length: " + _sizeSlider.Length + " Width: " + _sizeSlider.Width);
+    }
+
     public void Play()
     {
         PlayerPrefs.SetInt(PrefsStorage.MAZE_LENGTH, _sizeSlider.Length);

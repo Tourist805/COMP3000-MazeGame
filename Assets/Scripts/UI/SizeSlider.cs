@@ -20,6 +20,6 @@ public class SizeSlider : MonoBehaviour
         _length = Mathf.FloorToInt(_lengthSlider.value);
         _widthText.text = "Width: " + _widthSlider.value;
         _width = Mathf.FloorToInt(_widthSlider.value);
-        Debug.Log("Length: " + _length + " Width: " + _width);
+        //Debug.Log("Length: " + _length + " Width: " + _width);
     }
 }

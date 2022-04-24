@@ -28,7 +28,14 @@ public class GameManager : MonoBehaviour
     {
         Camera.main.clearFlags = CameraClearFlags.Skybox;
         Camera.main.rect = new Rect(0f, 0f, 1f, 1f);
-        Debug.Log("Maze Length: " + PlayerPrefs.GetInt(PrefsStorage.MAZE_LENGTH + " Maze Width: " + PrefsStorage.MAZE_WIDTH));
+        Debug.Log("Maze Length: " + PlayerPrefs.GetInt(PrefsStorage.MAZE_LENGTH) + " Maze Width: " + PlayerPrefs.GetInt(PrefsStorage.MAZE_WIDTH));
+        IntVector2 vectorMaze = new IntVector2();
+        vectorMaze.x = PlayerPrefs.GetInt(PrefsStorage.MAZE_LENGTH);
+        vectorMaze.z = PlayerPrefs.GetInt(PrefsStorage.MAZE_WIDTH);
+        if(vectorMaze.x != 0 && vectorMaze.z != 0)
+        {
+            MazePrefab.size = vectorMaze;
+        }
         _mazeInstance = Instantiate(MazePrefab) as Maze;
         yield return StartCoroutine(_mazeInstance.Generate());
         _playerInstance = Instantiate(PlayerPrefab) as Player;
