@@ -53,12 +53,12 @@ public class GameOverUI : MonoBehaviour
     public void BackToMenu()
     {
         Debug.Log("Return to menu");
-        //GameManager.EndGame();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
     public void RestartLevel()
     {
         Debug.Log("Restart level");
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
