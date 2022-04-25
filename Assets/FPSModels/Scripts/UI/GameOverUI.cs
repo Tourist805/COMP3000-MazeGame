@@ -59,6 +59,7 @@ public class GameOverUI : MonoBehaviour
     public void RestartLevel()
     {
         Debug.Log("Restart level");
+        ConditionObserver.GameHasEnded = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

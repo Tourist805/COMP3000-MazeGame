@@ -6,6 +6,7 @@ public class ConditionObserver : MonoBehaviour
 {
     [SerializeField] private GameOverUI _gameoverUI;
     [SerializeField] private int _winingCondition = 40;
+    public static bool GameHasEnded = false;
     public int WiningCondition
     {
         get
@@ -22,6 +23,7 @@ public class ConditionObserver : MonoBehaviour
     {
         if(Coin.Count >= _winingCondition)
         {
+            GameHasEnded = true;
             _gameoverUI.SetCondition(true);
             _gameoverUI.Open();
             FreezePlayer();

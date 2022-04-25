@@ -39,6 +39,7 @@ public class PlayerHealth : Health
 
         GetComponent<PlayerMovement>().enabled = false;
         GetComponent<PlayerAttack>().enabled = false;
+        ConditionObserver.GameHasEnded = true;
         PlayerDead?.Invoke();
     }
 }

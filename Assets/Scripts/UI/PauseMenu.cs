@@ -10,7 +10,7 @@ public class PauseMenu : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Escape) && (ConditionObserver.GameHasEnded == false))
         {
             if(IsPaused)
             {
@@ -21,6 +21,11 @@ public class PauseMenu : MonoBehaviour
                 Pause();
             }
         }
+    }
+
+    public void DestroyWindow()
+    {
+        
     }
 
     public void ActivateMenu()
