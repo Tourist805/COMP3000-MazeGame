@@ -30,6 +30,8 @@ public class PauseMenu : MonoBehaviour
 
     public void ActivateMenu()
     {
+        Coin.Count = 0;
+        ConditionObserver.GameHasEnded = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 

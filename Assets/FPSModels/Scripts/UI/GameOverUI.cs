@@ -53,6 +53,8 @@ public class GameOverUI : MonoBehaviour
     public void BackToMenu()
     {
         Debug.Log("Return to menu");
+        Coin.Count = 0;
+        ConditionObserver.GameHasEnded = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
@@ -60,6 +62,7 @@ public class GameOverUI : MonoBehaviour
     {
         Debug.Log("Restart level");
         ConditionObserver.GameHasEnded = false;
+        Coin.Count = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
