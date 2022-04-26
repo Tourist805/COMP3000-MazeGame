@@ -56,7 +56,7 @@ public class EnemyHealth : Health
             Coin.AddPoints(DamageType.Cyclope);
         }
 
-        Invoke("TurnOffGameObject", 1f);
+        Invoke("TurnOffGameObject", 3f);
         
         
     }
